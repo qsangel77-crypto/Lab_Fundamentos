@@ -1,11 +1,17 @@
-print("--- Calculadora de Promedios V1 ---")
+print("--- Calculadora de Promedios V4 ---")
 
-nota1 = float(input("Ingrese nota 1: "))
-nota2 = float(input("Ingrese nota 2: "))
-nota3 = float(input("Ingrese nota 3: "))
-nota4 = float(input("Ingrese nota 4: "))
-nota5 = float(input("Ingrese nota 5: "))
+n = int(input("¿Cuántas notas desea ingresar?: "))
+suma = 0
 
-promedio = (nota1 + nota2 + nota3 + nota4 + nota5) / 5
+for i in range(n):
+    nota = float(input(f"Ingrese la nota {i+1}: "))
+    suma += nota
 
-print(f"El promedio es: {promedio}")
+promedio = suma / n
+
+print(f"\nEl promedio es: {promedio}")
+
+if promedio >= 12:
+    print("Estado: ¡Aprobado!")
+else:
+    print("Estado: Reprobado")
